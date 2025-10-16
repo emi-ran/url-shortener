@@ -14,6 +14,10 @@ A modern Chrome extension that shortens URLs with automatic QR code generation. 
 - 🌙 **Dark Theme** - Beautiful dark mode interface with neon accents
 - 💾 **Download QR Code** - Save QR codes as PNG images
 - ♾️ **Permanent Links** - URLs never expire (using is.gd API)
+- 🔧 **Custom Short Codes** - Create personalized short URLs
+- 📜 **URL History** - Keep track of all shortened URLs
+- ⭐ **Favorites System** - Bookmark your most important links
+- 📊 **Statistics** - View click counts for your shortened URLs (when available)
 
 ## 🎨 Screenshots
 

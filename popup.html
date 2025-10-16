@@ -10,46 +10,91 @@
     <div class="container">
         <h1>🔗 URL Shortener</h1>
         
-        <div id="loading" class="hidden">
-            <div class="spinner"></div>
-            <p>Shortening...</p>
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="shorten">
+                🔗 Shorten
+            </button>
+            <button class="tab-btn" data-tab="history">
+                📜 History
+            </button>
+            <button class="tab-btn" data-tab="favorites">
+                ⭐ Favorites
+            </button>
         </div>
         
-        <div id="result" class="hidden">
-            <div class="url-display">
-                <label>Shortened URL:</label>
-                <div class="url-box short-url" id="shortUrl"></div>
+        <!-- Shorten Tab -->
+        <div id="shorten-tab" class="tab-content active">
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Shortening...</p>
             </div>
             
-            <div class="qr-container">
-                <label>QR Code:</label>
-                <img id="qrCode" alt="QR Code" />
+            <div id="result" class="hidden">
+                <!-- Custom Short Code Input -->
+                <div class="custom-code-input">
+                    <label for="customCode">Custom Short Code (optional):</label>
+                    <input type="text" id="customCode" placeholder="e.g., mylink" maxlength="30">
+                </div>
+                
+                <div class="url-display">
+                    <span class="url-label">Shortened URL:</span>
+                    <div class="url-box short-url" id="shortUrl"></div>
+                </div>
+                
+                <div class="qr-container">
+                    <span class="qr-label">QR Code:</span>
+                    <img id="qrCode" alt="QR Code" />
+                </div>
+                
+                <div class="info">
+                    <p><strong>Short Code:</strong> <span id="shortKey"></span></p>
+                    <p><strong>Clicks:</strong> <span id="clickCount">Loading...</span></p>
+                    <p><strong>Expires:</strong> <span id="expiry"></span></p>
+                </div>
+                
+                <div class="buttons">
+                    <button id="copyBtn" class="btn btn-primary">
+                        📋 Copy
+                    </button>
+                    <button id="openBtn" class="btn btn-secondary">
+                        🌐 Open
+                    </button>
+                    <button id="downloadQrBtn" class="btn btn-secondary">
+                        📥 Download QR
+                    </button>
+                    <button id="addFavoriteBtn" class="btn btn-secondary">
+                        ⭐ Favorite
+                    </button>
+                </div>
             </div>
             
-            <div class="info">
-                <p><strong>Short Code:</strong> <span id="shortKey"></span></p>
-                <p><strong>Expires:</strong> <span id="expiry"></span></p>
-            </div>
-            
-            <div class="buttons">
-                <button id="copyBtn" class="btn btn-primary">
-                    📋 Copy
-                </button>
-                <button id="openBtn" class="btn btn-secondary">
-                    🌐 Open
-                </button>
-                <button id="downloadQrBtn" class="btn btn-secondary">
-                    📥 Download QR
-                </button>
-                <button id="newBtn" class="btn btn-secondary">
-                    🔄 New
-                </button>
+            <div id="error" class="hidden error-box">
+                <p id="errorMsg"></p>
+                <button id="retryBtn" class="btn btn-primary">Try Again</button>
             </div>
         </div>
         
-        <div id="error" class="hidden error-box">
-            <p id="errorMsg"></p>
-            <button id="retryBtn" class="btn btn-primary">Try Again</button>
+        <!-- History Tab -->
+        <div id="history-tab" class="tab-content">
+            <div class="history-header">
+                <h2>Recent URLs</h2>
+                <button id="clearHistoryBtn" class="btn-clear">🗑️ Clear All</button>
+            </div>
+            <div id="historyList" class="url-list">
+                <p class="empty-message">No history yet</p>
+            </div>
+        </div>
+        
+        <!-- Favorites Tab -->
+        <div id="favorites-tab" class="tab-content">
+            <div class="history-header">
+                <h2>Favorite URLs</h2>
+                <button id="clearFavoritesBtn" class="btn-clear">🗑️ Clear All</button>
+            </div>
+            <div id="favoritesList" class="url-list">
+                <p class="empty-message">No favorites yet</p>
+            </div>
         </div>
     </div>
     
