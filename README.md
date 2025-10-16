@@ -19,18 +19,18 @@ A modern Chrome extension that shortens URLs with automatic QR code generation. 
 
 ```
 ┌─────────────────────────────┐
-│    🔗 URL Kısaltıcı         │
+│    🔗 URL Shortener         │
 ├─────────────────────────────┤
-│ Kısaltılmış URL:            │
+│ Shortened URL:              │
 │ https://is.gd/abc123        │
 │                             │
 │ [QR Code Preview]           │
 │                             │
-│ Kısa Kod: abc123            │
-│ Son Geçerlilik: Kalıcı      │
+│ Short Code: abc123          │
+│ Expires: Permanent          │
 │                             │
-│ [📋 Kopyala] [🌐 Aç]       │
-│ [📥 QR İndir] [🔄 Yeni]    │
+│ [📋 Copy] [🌐 Open]        │
+│ [📥 Download QR] [🔄 New]  │
 └─────────────────────────────┘
 ```
 
@@ -57,8 +57,8 @@ A modern Chrome extension that shortens URLs with automatic QR code generation. 
 1. Navigate to any webpage you want to shorten
 2. Click the extension icon in your toolbar
 3. The URL is automatically shortened with a QR code
-4. Click "📋 Kopyala" to copy the shortened URL
-5. Click "📥 QR İndir" to download the QR code
+4. Click "📋 Copy" to copy the shortened URL
+5. Click "📥 Download QR" to download the QR code
 
 ## 🛠️ Tech Stack
 
@@ -77,8 +77,7 @@ url-shortener/
 ├── popup.css          # Dark theme styles
 ├── popup.js           # Main logic
 ├── icon.png           # Extension icon
-├── url_shortener.py   # Python CLI version
-├── requirements.txt   # Python dependencies
+├── .gitignore         # Git ignore rules
 └── README.md          # Documentation
 ```
 
@@ -91,14 +90,15 @@ The extension uses the following APIs:
 
 No API keys required!
 
-## 📝 Python Version
+## 🔧 Development
 
-A command-line Python version is also included:
+To modify or contribute to this extension:
 
-```bash
-pip install -r requirements.txt
-python url_shortener.py
-```
+1. Clone the repository
+2. Make your changes to the source files
+3. Load the extension in Chrome using "Load unpacked"
+4. Test your changes
+5. Submit a pull request
 
 ## 🤝 Contributing
 
