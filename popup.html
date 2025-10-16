@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 URL Shortener</h1>
+        
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Shortening...</p>
+        </div>
+        
+        <div id="result" class="hidden">
+            <div class="url-display">
+                <label>Shortened URL:</label>
+                <div class="url-box short-url" id="shortUrl"></div>
+            </div>
+            
+            <div class="qr-container">
+                <label>QR Code:</label>
+                <img id="qrCode" alt="QR Code" />
+            </div>
+            
+            <div class="info">
+                <p><strong>Short Code:</strong> <span id="shortKey"></span></p>
+                <p><strong>Expires:</strong> <span id="expiry"></span></p>
+            </div>
+            
+            <div class="buttons">
+                <button id="copyBtn" class="btn btn-primary">
+                    📋 Copy
+                </button>
+                <button id="openBtn" class="btn btn-secondary">
+                    🌐 Open
+                </button>
+                <button id="downloadQrBtn" class="btn btn-secondary">
+                    📥 Download QR
+                </button>
+                <button id="newBtn" class="btn btn-secondary">
+                    🔄 New
+                </button>
+            </div>
+        </div>
+        
+        <div id="error" class="hidden error-box">
+            <p id="errorMsg"></p>
+            <button id="retryBtn" class="btn btn-primary">Try Again</button>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
+
