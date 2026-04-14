@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>🔗 URL Shortener</h1>
-        
+
         <!-- Tabs -->
         <div class="tabs">
             <button class="tab-btn active" data-tab="shorten">
@@ -22,37 +22,37 @@
                 ⭐ Favorites
             </button>
         </div>
-        
+
         <!-- Shorten Tab -->
         <div id="shorten-tab" class="tab-content active">
             <div id="loading" class="hidden">
                 <div class="spinner"></div>
                 <p>Shortening...</p>
             </div>
-            
+
             <div id="result" class="hidden">
                 <!-- Custom Short Code Input -->
                 <div class="custom-code-input">
                     <label for="customCode">Custom Short Code (optional):</label>
                     <input type="text" id="customCode" placeholder="e.g., mylink" maxlength="30">
                 </div>
-                
+
                 <div class="url-display">
                     <span class="url-label">Shortened URL:</span>
                     <div class="url-box short-url" id="shortUrl"></div>
                 </div>
-                
+
                 <div class="qr-container">
                     <span class="qr-label">QR Code:</span>
                     <img id="qrCode" alt="QR Code" />
                 </div>
-                
+
                 <div class="info">
                     <p><strong>Short Code:</strong> <span id="shortKey"></span></p>
                     <p><strong>Clicks:</strong> <span id="clickCount">Loading...</span></p>
                     <p><strong>Expires:</strong> <span id="expiry"></span></p>
                 </div>
-                
+
                 <div class="buttons">
                     <button id="copyBtn" class="btn btn-primary">
                         📋 Copy
@@ -68,13 +68,13 @@
                     </button>
                 </div>
             </div>
-            
+
             <div id="error" class="hidden error-box">
                 <p id="errorMsg"></p>
                 <button id="retryBtn" class="btn btn-primary">Try Again</button>
             </div>
         </div>
-        
+
         <!-- History Tab -->
         <div id="history-tab" class="tab-content">
             <div class="history-header">
@@ -85,7 +85,7 @@
                 <p class="empty-message">No history yet</p>
             </div>
         </div>
-        
+
         <!-- Favorites Tab -->
         <div id="favorites-tab" class="tab-content">
             <div class="history-header">
@@ -97,8 +97,7 @@
             </div>
         </div>
     </div>
-    
-    <script src="popup.js"></script>
+
+    <script type="module" src="main.js"></script>
 </body>
 </html>
-
